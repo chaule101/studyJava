@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Poly -->
+    <link href="css/poly.css" rel="stylesheet" />
+</head>
+<body ng-app="myapp">
+   
+    <div ng-app="myapp" ng-controller="myctr" >
+    <form>
+        <div  class="form-group " >
+            <label>Chiều Dài</label>
+            <input ng-model="dai" class="form-control"/>
+        </div>
+        <div  class="form-group " >
+            <label>Chiều Rộng</label>
+            <input ng-model="rong" class="form-control"/>
+        </div>
+        <div  class="form-group " >
+            <label>Diện Tích</label>
+            <div ng-bind="dientich" class="form-control" />
+        </div>
+        <div  class="form-group " >
+            <label>Chu Vi</label>
+            <div ng-bind="chuvi" class="form-control" />
+        </div>
+    </form>
+        <hr/>
+
+        <div class="form-group">
+          <button class="btn btn-success"
+          ng-click="tinh()">Calculate</button>
+          
+           
+        </div>
+
+   
+      
+    
+    <script>
+        var app= angular.module("myapp",[]);
+        app.controller("myctr",function($scope){
+           $scope.tinh=function(){
+               var a= parseFloat($scope.rong);
+               var b= parseFloat($scope.dai);
+               $scope.dientich = a*b;
+               $scope.chuvi = (a+b)*2;
+               
+           }
+        });
+    </script>
+  </div>
+</body>
+</html>

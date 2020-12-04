@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/poly.css">
+    <style>
+        .carousel-inner img {
+            margin: 0 auto;
+            height: 150px;
+            max-width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="row">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html" style="color: yellow;">PS10930</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html" style="color: yellow;">Trang chủ</a></li>
+                            <li><a href="#" style="color: yellow;">Bất động sản</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: yellow;">Loại
+                                    <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="canhochungcu.html">Căn hộ/Chung cư</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="nhao.html">Nhà ở</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="dat.html">Đất nền dự án</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="vanphongmatbang.html">Văn phòng, mặt bằng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="lienhe.html" style="color: yellow;">Liên hệ</a></li>
+                            <li><a href="gopy.html" style="color: yellow;">Góp ý</a></li>                           
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Tìm</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" style="color: yellow;">Tiếng việt</a></li>
+                            <li><a href="#" style="color: yellow;">English</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </nav>
+        <div class="poly-sheet row">
+            <article class="col-sm-9">
+                <div id="carousel-simple" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-simple" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-simple" data-slide-to="1"></li>
+                        <li data-target="#carousel-simple" data-slide-to="2"></li>
+                        <li data-target="#carousel-simple" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="images/1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-simple" role="button" data-slide="prev">
+
+                    </a>
+                    <a class="right carousel-control" href="#carousel-simple" role="button" data-slide="next">
+
+                    </a>
+                </div>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="chitiet1.html" class="thumbnail">
+                                <img src="images/bt/1.jpg" alt="" /></a>
+                            <div class="caption">
+                                Cần bán 5 suất ngoại giao biệt thự Khai Sơn Hill chỉ từ 65 tr/m2, chiết khấu 15% vào
+                                thẳng hợp đồng.
+                                <a href="chitiet1.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="chitiet2.html" class="thumbnail">
+                                <img src="images/bt/2.jpg" alt="" /></a>
+                            <div class="caption">
+                                Bán nhà biệt thự, liền kề Green Bay giá 18 tỷ, 93,5m2. Đường Đại lộ Thăng Long, Xã Mễ
+                                Trì, Quận Nam Từ Liêm, Hà Nội.
+                                <a href="chitiet2.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="chitiet3.html" class="thumbnail">
+                                <img src="images/bt/3.jpg" alt="" /></a>
+                            <div class="caption">
+                                Cần bán biệt thự Tứ Hiệp, Thanh Trì, diện tích 230m2, 4 tầng, giá 21 tỷ.
+                                <a href="chitiet3.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="chitiet4.html" class="thumbnail">
+                                <img src="images/bt/4.jpg" alt="" /></a>
+                            <div class="caption">
+                                Chính chủ cần bán lại căn biệt thự Khai Sơn hướng Đông Bắc giá rẻ, sổ đỏ trao tay.
+                                <a href="chitiet4.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="chitiet5.html" class="thumbnail">
+                                <img src="images/bt/5.jpg" alt="" /></a>
+                            <div class="caption">
+                                Biệt thự, liền kề Hoài Đức - Hà Nội giá thỏa thuận
+                                <a href="chitiet5.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="chitiet6.html" class="thumbnail">
+                                <img src="images/bt/6.jpg" alt="" /></a>
+                            <div class="caption">
+                                Bán căn 240m2 đường 13,5m hướng Tây Bắc khu biệt thự Vườn Cam Vinapol Hoài Đức, Hà Nội.
+                                <a href="chitiet6.html" class="btn btn-sm btn-info">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="col-sm-3">
+                <!--Search-->
+                <div class="nn-cart">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form method="post" action="/Product/Search">
+                                Tìm kiếm <input placeholder="Keywords" name="Keywords" class="form-control" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--/Search-->
+
+                <!--Category-->
+                <div class="panel-group" id="accordion">
+                    <!--Category-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <strong>Nhà đất cho thuê</strong>
+                        </div>
+
+                        <div class="list-group panel-collapse collapse in" id="collapseOne">
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Căn hộ, chung cư</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Nhà riêng</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Nhà trọ, phòng trọ</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Kho, nhà xưởng</a>
+                        </div>
+                    </div>
+                    <!--/Category-->
+
+                    <!--Special-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseThr">
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <strong>Nhà đất cần mua</strong>
+                        </div>
+
+                        <div class="list-group panel-collapse collapse in" id="collapseThr">
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Căn hộ chung cư</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Nhà riêng</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Biệt thự</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Đất nền dự án</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>khu nghỉ dưỡng</a>
+                        </div>
+                    </div>
+                    <!--/Special-->
+
+                    <!--Supplier-->
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            <strong>Loại BĐS</strong>
+                        </div>
+                        <div class="list-group panel-collapse collapse in" id="collapseTwo">
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Đất nền</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Biệt thự</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Nhà xưởng</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Nhà hàng</a>
+                            <a href="#" class="list-group-item"><span class="badge">99</span>Khách sạn</a>
+                        </div>
+                    </div>
+                    <!--/Supplier-->
+                </div>
+                <!--Category-->
+        </div>
+        </aside>
+        <footer style="background-color: lightgreen;">
+            <div style="text-align: center;">
+                <p>PS10930 &copy; 2020. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

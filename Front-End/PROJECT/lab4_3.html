@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Poly -->
+    <link href="css/poly.css" rel="stylesheet" />
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+           
+        }
+    </style>
+</head>
+<body ng-app="myapp">
+    <div ng-controller = "myctr">
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <th>Hình</th>
+                <th>Họ Tên</th>
+                <th>Ngày Sinh</th>
+                <th>Giới Tính</th>
+                <th>Điểm</th>
+            </tr>
+
+            <tr>
+                <td><img src="images/{{student[0].photo}}"/></td>
+                <td>{{student[0].fullname}}</td>
+                <td>{{student[0].birthday}}</td>
+                <td>{{student[0].gender}}</td>
+                <td>{{student[0].mark}}</td>
+            </tr>
+
+            <tr>
+                <td><img src="images/{{student[1].photo}}"/></td>
+                <td>{{student[1].fullname}}</td>
+                <td>{{student[1].birthday}}</td>
+                <td>{{student[1].gender}}</td>
+                <td>{{student[1].mark}}</td>
+            </tr>
+
+            <tr>
+                <td><img src="images/{{student[2].photo}}"/></td>
+                <td>{{student[2].fullname}}</td>
+                <td>{{student[2].birthday}}</td>
+                <td>{{student[2].gender}}</td>
+                <td>{{student[2].mark}}</td>
+            </tr>
+
+        </table>
+   
+    <script>
+        var app= angular.module("myapp",[]);
+        app.controller("myctr",function($scope){
+            $scope.student = [
+                {
+                fullname:"Nguyễn Văn A",
+                birthday : "10-10-1996",
+                gender:"Nam",
+                photo: "student.jpg",
+                mark:8.5
+
+            },
+            {
+                fullname:"Nguyễn Văn B",
+                birthday : "10-10-1996",
+                gender:"Nam",
+                photo: "student.jpg",
+                mark:8.5
+
+            },
+            {
+                fullname:"Nguyễn Văn C",
+                birthday : "10-10-1996",
+                gender:"Nam",
+                photo: "student.jpg",
+                mark:8.5
+
+
+            }
+        ];
+            });
+    </script>
+    </div>
+</body> 
+</html>

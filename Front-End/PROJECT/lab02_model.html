@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--JQuery-->
+    <script src="js/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Poly -->
+    <link href="css/css.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-edit"></span>NHẬP LƯƠNG THÁNG 12</h4>
+        </div>
+        <div class="modal-body">
+            
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        
+                        <div class="panel-body">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <label>Mã nhân viên</label>
+                                        <input class="form-control" />
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label>Họ và tên</label>
+                                        <input class="form-control" />
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label>Câu lạc bộ</label>
+                                        <select class="form-control">
+                                            <option>HAGL</option>
+                                            <option>CHELSEA</option>
+                                            <option>MU</option>
+                                            <option>MC</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label>Lương</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control"/>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label>Thưởng</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control"/>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label>Phụ cấp</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control"/>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label>Ghi chú</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>                         
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-saved"></span> Lưu</button>
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-stop"></span>Hủy</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

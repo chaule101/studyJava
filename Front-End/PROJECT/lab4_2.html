@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script> 
+
+    
+</head>
+<body ng-app="myapp">
+    <div ng-controller = "myctr">
+        <img src="images/{{student.photo}}"/>
+        <ul>
+            <li>Họ Và Tên : {{student.fullname}}</li>
+            <li>Ngày Sinh: {{student.birthday}}</li>
+            <li>Giới Tính : {{student.gender}}</li>
+            <li>Điểm Trung Bình : {{student.mark}}</li>
+        </ul>
+   
+    <script>
+        var app= angular.module("myapp",[]);
+        app.controller("myctr",function($scope){
+            $scope.student = {
+                fullname:"Nguyễn Văn B",
+                birthday : "10-10-1996",
+                gender:"Nam",
+                photo: "student.jpg",
+                mark:8.5
+
+            }
+            });
+    </script>
+    </div>
+</body> 
+</html>

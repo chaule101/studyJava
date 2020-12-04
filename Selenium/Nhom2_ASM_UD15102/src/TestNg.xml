@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="test suite">
+	<test name="Regeression suite 1">
+		<groups>
+			<run>
+				<include name="selenium">
+				</include>
+			</run>
+		</groups>
+		<classes>
+			<class name="poly.selenium.SeleniumASM"></class>
+		</classes>
+	</test>
+</suite>

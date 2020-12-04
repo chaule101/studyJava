@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form class="panel body" name="frmBonus">
+        <div class="form-group">
+            <label>Họ Và Tên</label>
+            <input class="form-control" ng-model="fullname"
+                name="txtFullName" required/>
+            <span ng-show = "frmBonus.txtFullName.$invalid">
+                Vui Lòng Nhập Họ Và Tên
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+            <label>Lương</label>
+            <input class="form-control" ng-model="salary"
+            name="txtSalary" type="number" min ="2000000"/>
+            <div class="input-group-addon">VNĐ</div>
+
+        </div>
+        <span ng-show="frmBonus.txtSalary.$invalid">
+            Lương Ít Nhất 2 Triệu
+        </span>
+    </div>
+
+    <h4 ng-show="frmBonus.$valid">Chúc Mừng Bạn Nhập Đúng</h4>
+
+    </form>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        input.ng-invalid {
+ background-image: url('images/fire.jfif');
+ background-position:center right;
+ background-repeat:no-repeat;
+}
+    </style>
+</head>
+<body>
+    <div class="container" ng-app="myapp" ng-controller = "myctrl">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">THÔNG TIN SINH VIÊN</h2>
+            </div>
+            <form class="panel-body" name="frmStudent">
+                <div class="form-group">
+                    <lable>Họ Và Tên</lable>
+                    <input class="form-control" ng-model="fullname"
+                    name="txtFullName" required maxlength="25" />
+                <span ng-show = "frmStudent.txtFullName.$invalid">
+                    Vui Lòng Nhập Họ Và Tên
+                </span>
+                </div>
+
+                <div class="form-group">
+                    <lable>Điểm</lable>
+                    <input class="form-control" ng-model="mark" type="number"
+                    name="txtMark" required max="10" min="0" />
+                <span ng-show = "frmStudent.txtMark.$invalid">
+                   Điểm chỉ được nhập từ 0-10
+                </span>
+                </div>
+                
+                <div class="form-group">
+                    <lable>Email</lable>
+                    <input class="form-control" ng-model="email" type="email"
+                    name="txtEmail" required  />
+                <span ng-show = "frmStudent.txtEmail.$invalid">
+                   Không được để trống Email/Sai định dạng Email
+                </span>
+                </div>
+
+                <div class="form-group">
+                    <lable>Số Xe</lable>
+                    <input class="form-control" ng-model="number" type="text" pattern="5\d-[A-Z]\d-((\d{4})|(\d{3}\.\d{2}))"
+                    name="txtNumber" required  />
+                <span ng-show = "frmStudent.txtNumber.$invalid">
+                   Biển số xe không hợp lệ
+                </span>
+                </div>
+
+                <div class="panel-footer">
+                  <input type="button" value="Lưu" class="btn btn-primary"/>
+                  <h4 ng-show="frmStudent.$valid">Chúc Mừng Bạn Nhập Đúng</h4>
+                </div>
+               
+            </form>
+        </div>
+
+
+    </div>
+
+    <script>
+        var app = angular.module("myapp",[]);
+        app.controller("myctrl",function($scope){
+            
+
+           
+
+        
+        });
+    </script>
+
+</body>
+</html>
+

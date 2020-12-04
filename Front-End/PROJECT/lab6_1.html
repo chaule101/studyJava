@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" ng-app="myapp" ng-controller = "myctrl">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">TÍNH THƯỞNG TẾT NGUYÊN ĐÁN</h2>
+            </div>
+            <form class="panel-body">
+                <div class="form-group">
+                    <lable>Họ Và Tên</lable>
+                    <input class="form-control" ng-model = "fullname"/>
+                </div>
+                <div class="form-group">
+                    <lable>Lương</lable>
+                    <div class="input-group">
+                    <input class="form-control" ng-model = "salary"/>
+                    <div class="input-group-addon">VNĐ</div>
+                </div>
+            </div>
+                <div class="form-group">
+                    <label>Giới Tính</label>
+                    <div class="radio">
+                        <label><input type="radio" ng-model="gender" value="NAM"/>Nam</label> <br>
+                        <label><input type="radio" ng-model="gender" value="NU"/>Nữ</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Độ Tuổi</label>
+                    <select class="form-control" ng-model="age"
+                    ng-options = "x.age for x  in ages"></select>
+                </div>
+
+                <div class="panel-footer">
+                    TIỀN THƯỞNG: <strong>{{getBonus()|number:2}}</strong> VNĐ
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script>
+        var app = angular.module("myapp",[]);
+        app.controller("myctrl",function($scope){
+            $scope.ages = [
+                {
+                    age : "Dưới 25",
+                    rate : 0.07
+                },
+
+                {
+                    age : "Từ 25 đến 40",
+                    rate : 0.1  
+                },
+
+                {
+                    age : "Trên 40",
+                    rate : 0.15
+                }
+            ];
+
+            $scope.age = $scope.ages[1];
+            $scope.gender = "NAM";
+            $scope.fullname="Le Van A";
+            $scope.salary = 1000000;
+          
+
+
+            $scope.getBonus = function(){
+                var bonus  = $scope.age.rate * $scope.salary;
+                if($scope.gender=="NU"){
+                    bonus +=200000;
+                }
+                return bonus;
+
+            }
+
+        
+        });
+    </script>
+
+</body>
+</html>
+

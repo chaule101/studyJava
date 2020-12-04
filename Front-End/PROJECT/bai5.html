@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--AngularJS-->
+    <script src="js/angular.js"></script>
+    <!-- <script src="js/Prods.js"></script> -->
+    <script src="js/controller.js"></script>
+
+    <!--Poly css-->
+    <link rel="stylesheet" href="css/poly.css" />
+  </head>
+
+  <body>
+    <div ng-app="myApp" class="container">
+      <div ng-controller="myCtrl2">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            DANH SÁCH HÀNG HÓA
+          </div>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th><a href="#" ng-click="sortBy('name')">SẢN PHẨM</a></th>
+                <th><a href="#" ng-click="sortBy('price')">ĐƠN GIÁ</a></th>
+                <th><a href="#" ng-click="sortBy('discount')">GIẢM GIÁ</a></th>
+                <th><a href="#" ng-click="sortBy('date')">NGÀY</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="p in products|orderBy:prop|limitTo:8:begin">
+                <td>{{p.name|uppercase}}</td>
+                <td>{{p.price|currency}}</td>
+                <td>{{p.discount|percentage:2}}</td>
+                <td>{{p.date|date:"MMMM-dd, yyyy"}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pager">
+            <li>
+              <a href="#" ng-click="first()">
+                <span class="glyphicon glyphicon-hand-up"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" ng-click="prev()">
+                <span class="glyphicon glyphicon-hand-left"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" ng-click="next()">
+                <span class="glyphicon glyphicon-hand-right"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" ng-click="last()">
+                <span class="glyphicon glyphicon-hand-down"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

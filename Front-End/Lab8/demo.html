@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Mall</title>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div class="container" ng-app="myapp">
+        <header>
+           <h1> SINGLE PAGE APPLICATION</h1>
+        </header>
+        <hr />
+        <nav>
+            <a href="#1">red</a>
+            <a href="#2">blue</a>
+            <a href="#3">other</a>
+        </nav>
+        <hr />
+        <article>
+            <div ng-show="loading" class ="pull-right label label-info">Loading...</div>
+            <div ng-view>
+                
+            </div>
+        </article>
+    <hr/>
+    <footer>
+        FPT Polytechnic &copy; 2020. All rights reserved
+    </footer>
+    </div>
+    <script>
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when("/1",{
+                templateUrl: "root/red.html"
+            })
+            .when("/2",{
+                templateUrl: "root/blue.html"
+            })
+            .otherwise({
+                template : "<h1>FPT<h1>"
+            })
+        });
+
+        app.run(function($rootScope){
+            $rootScope.$on('$routeChangeStart',function(){
+            $rootScope.loading = true;
+        });
+            $rootScope.$on('$routeChangeSuccess',function(){
+            $rootScope.loading = false;
+        });
+            $rootScope.$on('$routeChangeError',function(){
+            $rootScope.loading = false;
+            alert("Lỗi , không tải được template")
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--JQuery-->
+    <script src="js/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Poly -->
+    <link href="css/css.css" rel="stylesheet" />
+    <style>
+        thead th{
+            text-align: center !important;
+            vertical-align: middle !important;
+            background-color: linen;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#edit" aria-controls="home" role="tab" data-toggle="tab">Cập Nhật</a>
+        </li>
+        <li role="presentation">
+            <a href="#list" aria-controls="profile" role="tab" data-toggle="tab">Danh Sách</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="edit">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <span class="glyphicon glyphicon-list"> </span> LƯƠNG NHẬP THÁNG 12
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="row">
+                                    
+                                        <div class="form-group col-sm-6">
+                                            <label>Mã nhân viên</label>
+                                            <input class="form-control" />
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Họ Và Tên</label>
+                                            <input class="form-control" />
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Câu Lạc Bộ</label>
+                                            <select class="form-control">
+                                                <option>Sông Lâm Nghệ An</option>
+                                                <option>Hoang Anh Gia Lai</option>
+                                                <option>Bình Dương</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Lương</label>
+                                            <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control"/>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Thưởng</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">$</div>
+                                                <input type="text" class="form-control"/>
+                                                <div class="input-group-addon">.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Phụ Cấp</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">$</div>
+                                                <input type="text" class="form-control"/>
+                                                <div class="input-group-addon">.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <label>Ghi Chú</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                   
+                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-saved"></span> Lưu</button>
+                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-stop"></span>Hủy</button>
+                               
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            Vui Lòng Nhập Thông Tin Cầu Thủ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div role="tabpanel" class="tab-pane" id="list">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            bảng lương tháng 12
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">MÃ</th>
+                                <th rowspan="2">HỌ TÊN</th>
+                                <th colspan="3">THU NHẬP</th>
+                            </tr>  
+                            <tr>
+                                <th>LƯƠNG</th>
+                                <th>THƯỞNG</th>
+                                <th>PHỤ CẤP</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NV100</td>
+                                <td>Nguyễn Công Phượng</td>
+                                <td>5000000</td>
+                                <td>5000000</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>NV200</td>
+                                <td>Phan Văn Tài Em</td>
+                                <td>6000000</td>
+                                <td>6000000</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                                <td>NV300</td>
+                                <td>Lê Huỳnh Đức</td>
+                                <td>7000000</td>
+                                <td>7000000</td>
+                                <td>100000</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    <div class="panel-footer">
+                        Lương cầu thủ và huấn luận viên chuyên nghiệp
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+   
+
+
+</body>
+
+</html>
